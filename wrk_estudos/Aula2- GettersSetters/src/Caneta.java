@@ -10,7 +10,6 @@ public class Caneta {
 	
 	
 	public Caneta(String modelo, float ponta, String cor) {
-		super();
 		this.modelo = modelo;
 		this.ponta = ponta;
 		this.cor = cor;

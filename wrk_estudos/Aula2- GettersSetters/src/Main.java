@@ -3,7 +3,7 @@
 public class Main {
 	
 	public static void main(String[] args) {
-		Caneta c1 = new Caneta("Bic", 0.3f, "Amarela");
+		Caneta c1 = new Caneta("", 0.0f, "");
 		c1.setModelo("BIC");
 		c1.setPonta(0.5f);
 		c1.status();
