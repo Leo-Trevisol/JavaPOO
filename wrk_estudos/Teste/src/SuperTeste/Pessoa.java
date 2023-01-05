@@ -1,3 +1,4 @@
+package SuperTeste;
 
 public class Pessoa {
 	
