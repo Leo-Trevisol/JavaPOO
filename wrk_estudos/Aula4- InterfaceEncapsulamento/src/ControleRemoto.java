@@ -38,37 +38,41 @@ public class ControleRemoto implements Controlador {
 
 	@Override
 	public void ligar() {
-		// TODO Auto-generated method stub
+		this.setLigado(true);
 		
 	}
 
 	@Override
 	public void desligar() {
-		// TODO Auto-generated method stub
+		this.setLigado(false);
 		
 	}
 
 	@Override
 	public void abrirMenu() {
-		System.out.println(isLigado());
-		System.out.println(getVolume());
-		for(int i = 0; i < getVolume(); i++){
-			System.out.println("|");
+		System.out.println("-------MENU-------");
+		System.out.println("Ligado?:" + isLigado());
+		System.out.println("Volume:" + getVolume());
+		for(int i = 0; i <= getVolume(); i+=10){
+			System.out.print("|");
 		}
-		System.out.println(isTocando());
+		System.out.println();
+		System.out.println("Tocando:" + isTocando());
 		
 	}
 
 	@Override
 	public void fecharMenu() {
-		// TODO Auto-generated method stub
+		System.out.println("Fechando menu...");
 		
 	}
 
 	@Override
 	public void maisVolume() {
 		if(isLigado()) {
-			setVolume(getVolume() + 1);
+			setVolume(getVolume() + 5);
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 	}
@@ -76,7 +80,9 @@ public class ControleRemoto implements Controlador {
 	@Override
 	public void menosVolume() {
 		if(isLigado()) {
-			setVolume(getVolume() - 1);
+			setVolume(getVolume() - 5);
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 	}
@@ -88,6 +94,8 @@ public class ControleRemoto implements Controlador {
 				setVolume(0);
 			}
 			
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 	}
@@ -99,6 +107,8 @@ public class ControleRemoto implements Controlador {
 				setVolume(50);
 			}
 			
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 		
@@ -110,6 +120,8 @@ public class ControleRemoto implements Controlador {
 			if(!isTocando()) {
 				setTocando(true);
 			}
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 	}
@@ -120,6 +132,8 @@ public class ControleRemoto implements Controlador {
 			if(isTocando()) {
 				setTocando(false);
 			}
+		}else {
+			System.out.println("Acao impossivel... aparelho desligado!");
 		}
 		
 	}
