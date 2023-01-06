@@ -1,3 +1,4 @@
+package TestesGeral;
 
 public class Main2 {
 

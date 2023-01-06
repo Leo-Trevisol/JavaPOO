@@ -1,4 +1,4 @@
-
+package TestesGeral;
 public class TestaCarro {
 	
 	static int x = 37;

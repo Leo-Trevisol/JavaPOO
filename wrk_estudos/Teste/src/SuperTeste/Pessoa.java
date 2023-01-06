@@ -1,5 +1,4 @@
 package SuperTeste;
-
 public class Pessoa {
 	
 	private String nome;
