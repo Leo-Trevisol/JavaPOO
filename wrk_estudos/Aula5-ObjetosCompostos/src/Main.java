@@ -3,17 +3,27 @@
 public class Main {
 
 	public static void main(String[] args) {
-		Lutador l1 = new Lutador("Leozin", "Brazil", 17, 1.70, 71.0, 10, 5, 1);
-		l1.apresentar();
 
-			   int min = 0; // Minimum value of range
-		      int max = 2; // Maximum value of range
-		      // Print the min and max  
-		      System.out.println("Random value in int from "+ min + " to " + max + ":");
-		      // Generate random int value from min to max
-		      int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
-		      // Printing the generated random numbers
-		      System.out.println(random_int);	
+		Lutador lutadores[] = new Lutador[6];
+
+		lutadores[0] = new Lutador("Leozin", "Brazil", 17, 1.74, 71.0, 10, 5, 1);
+
+		lutadores[1] = new Lutador("SwitcGuy", "Switerzerland", 18, 1.75, 74.0, 1, 5, 5);
+
+		lutadores[2] = new Lutador("WhatzMan", "Netherlands", 19, 1.90, 78.0, 5, 5, 6);
+
+		lutadores[3] = new Lutador("Gonzalo", "Argentina", 20, 1.85, 82.0, 52, 0, 1);
+		
+		lutadores[4] = new Lutador("PicaTchu", "Japan", 21, 1.60, 102.0, 4, 0, 4);
+		
+		lutadores[5] = new Lutador("KinJon", "Korea", 22, 1.52, 86.0, 12, 3, 2);
+
+		Luta novaLuta = new Luta();
+		novaLuta.marcarLuta(lutadores[2], lutadores[3]);
+		novaLuta.lutar();
+		lutadores[2].status();
+
+		lutadores[3].status();	 
 
 	}
 
