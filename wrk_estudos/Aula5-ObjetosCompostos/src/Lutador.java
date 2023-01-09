@@ -127,9 +127,18 @@ public class Lutador {
 		System.out.println("Com " + getVitorias() + " Vitorias");
 		System.out.println("Com " + getDerrotas() + " Derrotas");
 		System.out.println("Com " + getEmpates() + " Empates");
+		System.out.println();
 
 
 
+	}
+	
+	public void status() {
+		System.out.println("LUTADOR " + getNome());
+		System.out.println("-----------------------");
+		System.out.println("Vitorias: " + getVitorias());
+		System.out.println("Derrotas: " + getDerrotas());
+		System.out.println("Empates: " + getEmpates());
 	}
 
 	@Override

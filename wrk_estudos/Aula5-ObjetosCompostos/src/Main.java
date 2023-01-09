@@ -1,5 +1,4 @@
 
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -13,17 +12,18 @@ public class Main {
 		lutadores[2] = new Lutador("WhatzMan", "Netherlands", 19, 1.90, 78.0, 5, 5, 6);
 
 		lutadores[3] = new Lutador("Gonzalo", "Argentina", 20, 1.85, 82.0, 52, 0, 1);
-		
+
 		lutadores[4] = new Lutador("PicaTchu", "Japan", 21, 1.60, 102.0, 4, 0, 4);
-		
+
 		lutadores[5] = new Lutador("KinJon", "Korea", 22, 1.52, 86.0, 12, 3, 2);
 
 		Luta novaLuta = new Luta();
 		novaLuta.marcarLuta(lutadores[2], lutadores[3]);
 		novaLuta.lutar();
 		lutadores[2].status();
-
-		lutadores[3].status();	 
+		System.out.println();
+		lutadores[3].status();
+		System.out.println();
 
 	}
 

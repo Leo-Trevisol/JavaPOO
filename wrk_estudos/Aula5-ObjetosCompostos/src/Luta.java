@@ -23,7 +23,6 @@ public class Luta {
 	}
 	
 	public void lutar() {
-		Lutador vencedor = null;
 		if(aprovada) {
 			desafiado.apresentar();
 			desafiante.apresentar();
@@ -39,18 +38,20 @@ public class Luta {
 			case 1:
 				desafiado.ganharLuta();
 				desafiante.perderLuta();
-				System.out.println("O lutador " + desafiado + " venceu a luta!");
+				System.out.println("O lutador " + desafiado.getNome() + " venceu a luta!");
 				break;
 			case 2:
 				desafiado.perderLuta();
 				desafiante.ganharLuta();
-				System.out.println("O lutador " + desafiante + " venceu a luta!");
+				System.out.println("O lutador " + desafiante.getNome() + " venceu a luta!");
 
 						}
 
 		}else {
 			System.out.println("Luta nao pode acontencer...");
 		}
+		
+		System.out.println();
 		
 	}
 	
