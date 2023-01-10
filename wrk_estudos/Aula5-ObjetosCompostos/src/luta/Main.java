@@ -1,3 +1,4 @@
+package luta;
 import java.util.Random;
 
 public class Main {
