@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Main {
 
@@ -16,14 +17,25 @@ public class Main {
 		lutadores[4] = new Lutador("PicaTchu", "Japan", 21, 1.60, 102.0, 4, 0, 4);
 
 		lutadores[5] = new Lutador("KinJon", "Korea", 22, 1.52, 86.0, 12, 3, 2);
+		
+		Random r = new Random();
+		int lut1 = r.nextInt(5);
+		int lut2 = r.nextInt(5);
 
 		Luta novaLuta = new Luta();
-		novaLuta.marcarLuta(lutadores[2], lutadores[3]);
+		
+		novaLuta.marcarLuta(lutadores[lut1], lutadores[lut2]);
 		novaLuta.lutar();
-		lutadores[2].status();
-		System.out.println();
-		lutadores[3].status();
-		System.out.println();
+		
+		if(novaLuta.isAprovada()) {
+			lutadores[lut1].status();
+			System.out.println();
+			lutadores[lut2].status();
+			System.out.println();
+		}
+		
+		
+		
 
 	}
 
