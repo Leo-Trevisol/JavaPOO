@@ -6,7 +6,7 @@ public interface Publicacao {
 	
 	public void fechar();
 	
-	public void folhear();
+	public void folhear(int pagina);
 	
 	public void avancarPag();
 	

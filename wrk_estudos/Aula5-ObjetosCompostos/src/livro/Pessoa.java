@@ -38,7 +38,10 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 	
-
+	public String toString(){
+		return 
+		"Leitor [nome=" + nome + "\n, idade=" + idade + "\n, sexo=" + sexo + "]";
+	}
 	
 
 }

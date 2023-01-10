@@ -19,6 +19,11 @@ public class Livro implements Publicacao{
 		this.leitor = leitor;
 	}
 
+	public String detalhes() {
+		return "Livro [titulo=" + titulo + "\n, autor=" + autor + "\n, totalPag=" + totalPag + "\n, pagAtual=" + pagAtual
+				+ "\n, aberto=" + aberto + "\n, leitor=" + leitor.toString() + "]";
+	}
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -69,38 +74,40 @@ public class Livro implements Publicacao{
 
 	@Override
 	public void abrir() {
-		// TODO Auto-generated method stub
+		this.aberto = true;
 		
 	}
 
 	@Override
 	public void fechar() {
-		// TODO Auto-generated method stub
+		this.aberto = false;
 		
 	}
 
 	@Override
-	public void folhear() {
-		// TODO Auto-generated method stub
+	public void folhear(int pagina) {
+		if(pagina > this.totalPag){
+			this.pagAtual = 0;
+		}else{
+			this.pagAtual = pagina;
+		}
+		
 		
 	}
 
 	@Override
 	public void avancarPag() {
-		// TODO Auto-generated method stub
+		this.pagAtual++;
 		
 	}
 
 	@Override
 	public void voltarPag() {
-		// TODO Auto-generated method stub
+		this.pagAtual--;
 		
 	}
 
-	public String detalhes() {
-		return "Livro [titulo=" + titulo + ", autor=" + autor + ", totalPag=" + totalPag + ", pagAtual=" + pagAtual
-				+ ", aberto=" + aberto + ", leitor=" + leitor + "]";
-	}
+	
 	
 	
 	
