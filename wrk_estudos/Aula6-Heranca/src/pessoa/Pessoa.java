@@ -1,6 +1,6 @@
 package pessoa;
 
-public class Pessoa {
+public abstract class Pessoa {
 	
 	private String nome;
 	private int idade;
@@ -17,9 +17,7 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 	
-    public  String getClassName(){
-        return Pessoa.class.getSimpleName();
-    }
+    public abstract String getClassName();
 
 	public String getNome() {
 		return nome;
@@ -45,14 +43,17 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 	
-	public void status() {
-		System.out.println("-------------------------------------------------");
-		System.out.println("Nome " +  getClassName() + ": " + this.getNome() );
-		System.out.println("Idade " +  getClassName() + ": " + this.getIdade() );
-		System.out.println("Sexo " +  getClassName() + ": " + this.getSexo() );
-		
-
-
+	public abstract void status();
+	
+	public void show() {
+ 
+	System.out.println("-------------------------------------------------");
+	System.out.println("Nome do " +  getClassName().toLowerCase() + ": " + this.getNome() );
+	System.out.println("Idade do " +  getClassName().toLowerCase() + ": " + this.getIdade() );
+	System.out.println("Sexo do " +  getClassName().toLowerCase() + ": " + this.getSexo() );
+			
 	}
+	
+	
 
 }

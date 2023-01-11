@@ -44,9 +44,9 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public void status() {
-		super.status();
-		System.out.println("Setor " +  getClassName() + ": " + this.getSetor() );
-		System.out.println("Trabalhando " +  getClassName() + ": " + this.isTrabalhando() );
+		super.show();
+		System.out.println("Setor do " +  getClassName().toLowerCase() + ": " + this.getSetor() );
+		System.out.println("Trabalhando " +  getClassName().toLowerCase() + ": " + this.isTrabalhando() );
 	}
 	
 	

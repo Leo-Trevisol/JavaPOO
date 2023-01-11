@@ -12,16 +12,6 @@ public class Aluno extends Pessoa {
 		this.curso = curso;
 	}
 
-	
-
-	@Override
-	public String getClassName() {
-		
-		return Aluno.class.getSimpleName();
-	}
-
-
-
 	public boolean isMatriculado() {
 		return matriculado;
 	}
@@ -44,13 +34,18 @@ public class Aluno extends Pessoa {
 	public void cancelarMatricula() {
 		this.setMatriculado(false);
 	}
-
+	
+	@Override
+	public String getClassName() {
+		
+		return Aluno.class.getSimpleName();
+	}
 
 	@Override
 	public void status() {
-		super.status();
-		System.out.println("Matriculado " +  getClassName() + ": " + this.isMatriculado() );
-		System.out.println("Curso " +  getClassName() + ": " + this.getCurso() );
+		super.show();
+		System.out.println("Matriculado " +  getClassName().toLowerCase() + ": " + this.isMatriculado() );
+		System.out.println("Curso do " +  getClassName().toLowerCase() + ": " + this.getCurso() );
 	}
 	
 	

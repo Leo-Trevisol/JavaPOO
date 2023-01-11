@@ -17,18 +17,15 @@ public class Professor extends Funcionario{
 
 	@Override
 	public String getClassName() {
-		
 		return Professor.class.getSimpleName();
 	}
-
-
 
 
 	@Override
 	public void status() {
 		super.status();
-		System.out.println("Especialidade " +  getClassName() + ": " + this.getEspecialidade() );
-		System.out.println("Salario " +  getClassName() + ": " + this.getSalario() );
+		System.out.println("Especialidade do " +  getClassName().toLowerCase() + ": " + this.getEspecialidade() );
+		System.out.println("Salario do " +  getClassName().toLowerCase() + ": " + this.getSalario() );
 	}
 
 
