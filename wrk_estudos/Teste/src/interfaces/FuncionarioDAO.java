@@ -1,4 +1,4 @@
-package intface;
+package interfaces;
 
 import java.util.List;
 

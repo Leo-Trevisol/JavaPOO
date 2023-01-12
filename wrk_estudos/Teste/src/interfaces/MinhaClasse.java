@@ -1,4 +1,4 @@
-package intface;
+package interfaces;
 
 public class MinhaClasse implements MinhaPrimeiraInterface {
 
