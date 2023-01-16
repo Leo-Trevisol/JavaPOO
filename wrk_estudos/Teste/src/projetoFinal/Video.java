@@ -19,19 +19,19 @@ public class Video implements AcoesVideo {
 
 	@Override
 	public void play() {
-		// TODO Auto-generated method stub
-
+		this.reproduzindo = true;
+		System.out.println("Video reproduzindo...");
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
-
+		this.reproduzindo = false;
+		System.out.println("Video pausado...");
 	}
 
 	@Override
 	public void like() {
-		// TODO Auto-generated method stub
+		this.curtidas += 1;
 
 	}
 
@@ -48,7 +48,9 @@ public class Video implements AcoesVideo {
 	}
 
 	public void setAvaliacao(int avaliacao) {
-		this.avaliacao = avaliacao;
+		int nova;
+		nova = (int) ((this.avaliacao + avaliacao)/this.views);
+		this.avaliacao = nova;
 	}
 
 	public int getViews() {

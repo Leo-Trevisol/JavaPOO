@@ -10,7 +10,7 @@ public class Main {
 		videos[1] =  new Video("Receita de strogolove");
 		videos[2] = new Video ("Receita de lentilha");
 		
-		System.out.println(videos[0].toString());
+		
 		
 		Viewer[] viw = new Viewer[2];
 		
@@ -19,8 +19,15 @@ public class Main {
 		
 		System.out.println("---------------------------");
 		
-		System.out.println(viw[0].toString());
 		
+		Vizualizacao vizu[] = new Vizualizacao[3];
+		
+		vizu[0] = new Vizualizacao(viw[0], videos[0]);
+		
+		videos[0].play();
+		videos[0].like();
+		
+		System.out.println(vizu[0].toString());
 		
 		
 	}
